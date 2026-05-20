@@ -125,5 +125,60 @@ SELECT age, COUNT(*) AS total FROM hospital_analysis GROUP BY age ORDER BY age;
 -- Target variable 
 SELECT readmitted, COUNT(*) AS total FROM hospital_analysis GROUP BY readmitted;
 
+-- Readmission rate analysis 
+-- Which group has higher readmission risk?
+
+select medical_specialty, count(*)  as total_patients , 
+sum(case when readmitted = 'yes' then 1 else 0 end) as readmitted_count, 
+round(sum(case when readmitted = 'yes' then 1 else 0 end )* 100.0 /count(*) ,2) as readmission_rate from hospital_analysis 
+group by medical_specialty order by readmission_rate desc;
+
+
+-- By Age Group 
+
+select medical_specialty, count(*) as total_patients, 
+sum(case when readmitted = 'yes' then 1 else 0 end ) as readmitted_count , 
+round(sum(case when readmitted = 'yes' then 1 else 0 end )*100.0 /count(*),2) as readmission_rate from hospital_analysis
+group by age order by age;
+
+-- Average values per group
+-- hospital stay vs readmission
+select readmitted, avg(time_in_hospital) as avg_stay, avg(n_medications) as avg_meds, 
+avg(n_lab_procedures) as avg_labs from hospital_analysis group by readmitted;
+
+-- high usage patients
+
+select 
+case when n_inpatient >= 2 then 'high patient' else 'low inpatient' end as inpatient_group , 
+count(*) as total, sum(case when readmitted = 'yes' then 1 else 0 end) as readmitted_count from hospital_analysis
+group by inpatient_group;
+
+-- EMERGENCY / UTILIZATION ANALYSIS
+-- n_emergency, n_inpatient, n_outpatient
+-- Do frequent hospital visitors get readmitted more?
+
+select n_emergency, count(*) as total, sum(case when readmitted = 'yes' then 1 else 0 end ) 
+as readmitted_count from hospital_analysis group by n_emergency order by n_emergency desc;
+
+select n_inpatient , count(*) as total, sum(case when readmitted = 'yes' then 1 else 0 end ) 
+as readmitted_count from hospital_analysis group by n_inpatient order by n_inpatient  desc;
+
+select n_outpatient , count(*) as total, sum(case when readmitted = 'yes' then 1 else 0 end ) 
+as readmitted_count from hospital_analysis group by n_outpatient order by n_outpatient  desc;
+
+
+-- glucose_test, A1Ctest 
+-- Do test results relate to readmission?
+select  glucose_test , count(*) as total , 
+round(sum(case when readmitted = 'yes' then 1 else 0 end ) *100.0 /count(*) ,2) as readmission_rate
+from hospital_analysis group by  glucose_test ;
+
+select A1Ctest, count(*) as total, 
+round(sum(case when readmitted = 'yes' then 1 else 0 end) * 100.0/ count(*) ,2) as readmission_rate 
+from hospital_analysis group by A1Ctest;
+
+
+
+
 
 
