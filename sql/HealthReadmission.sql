@@ -177,8 +177,165 @@ select A1Ctest, count(*) as total,
 round(sum(case when readmitted = 'yes' then 1 else 0 end) * 100.0/ count(*) ,2) as readmission_rate 
 from hospital_analysis group by A1Ctest;
 
+-- Readmission Rate by Age Group
+SELECT
+    age,
+    COUNT(*) AS total_patients,
+    SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END) AS readmitted_count,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY age
+ORDER BY age;
+
+-- Top Diagnoses with Highest Readmission
+SELECT
+    diag_1,
+    COUNT(*) AS total_patients,
+    SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END) AS readmitted_count,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY diag_1
+HAVING COUNT(*) > 100
+ORDER BY readmission_rate DESC;
 
 
+-- Length of Stay vs Readmission
+
+SELECT
+    time_in_hospital,
+    COUNT(*) AS total,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY time_in_hospital
+ORDER BY time_in_hospital;
 
 
+-- Medication Usage Groups
+SELECT
+    CASE
+        WHEN n_medications <= 10 THEN 'Low'
+        WHEN n_medications <= 20 THEN 'Medium'
+        ELSE 'High'
+    END AS medication_group,
+    COUNT(*) AS total,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY medication_group;
 
+
+-- Combined Utilization Score
+
+SELECT
+    CASE
+        WHEN (n_emergency+n_inpatient+n_outpatient) >= 5
+        THEN 'High Utilization'
+        ELSE 'Low Utilization'
+    END AS utilization_group,
+    COUNT(*) AS total,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY utilization_group;
+
+
+-- Diabetes Medication Impact
+
+SELECT
+    diabetes_med,
+    COUNT(*) AS total,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY diabetes_med;
+
+
+-- Medication Change Impact
+SELECT
+    `change`,
+    COUNT(*) AS total,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY `change`;
+
+
+-- Age + Diabetes Medication Cross Analysis
+
+SELECT
+    age,
+    diabetes_med,
+    COUNT(*) AS total,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate
+FROM hospital_analysis
+GROUP BY age, diabetes_med
+ORDER BY age;
+
+
+-- Specialty Performance Ranking
+
+SELECT
+    medical_specialty,
+    COUNT(*) AS total_patients,
+    ROUND(
+        SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+    ) AS readmission_rate,
+    RANK() OVER(
+        ORDER BY
+        ROUND(
+            SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END)*100.0/COUNT(*),2
+        ) DESC
+    ) AS specialty_rank
+FROM hospital_analysis
+GROUP BY medical_specialty;
+
+-- High-Risk Patient Profile
+SELECT
+    readmitted,
+    ROUND(AVG(time_in_hospital),2) AS avg_stay,
+    ROUND(AVG(n_medications),2) AS avg_medications,
+    ROUND(AVG(n_lab_procedures),2) AS avg_labs,
+    ROUND(AVG(n_inpatient),2) AS avg_inpatient_visits,
+    ROUND(AVG(n_emergency),2) AS avg_emergency_visits
+FROM hospital_analysis
+GROUP BY readmitted;
+
+
+-- Readmission Contribution by Specialty
+
+SELECT
+    medical_specialty,
+    SUM(CASE WHEN readmitted='yes' THEN 1 ELSE 0 END) AS readmitted_patients
+FROM hospital_analysis
+GROUP BY medical_specialty
+ORDER BY readmitted_patients DESC;
+
+
+-- . Create a Dashboard Dataset
+
+CREATE VIEW hospital_dashboard AS
+SELECT
+    age,
+    medical_specialty,
+    diabetes_med,
+    glucose_test,
+    A1Ctest,
+    time_in_hospital,
+    n_medications,
+    n_inpatient,
+    n_outpatient,
+    n_emergency,
+    readmitted
+FROM hospital_analysis;
