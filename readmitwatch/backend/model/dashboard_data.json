@@ -1,0 +1,1115 @@
+{
+  "overview": {
+    "total_patients": 25000,
+    "readmitted_count": 11754,
+    "not_readmitted_count": 13246,
+    "readmission_rate": 47.02,
+    "avg_time_in_hospital": 4.45,
+    "avg_medications": 16.25,
+    "avg_lab_procedures": 43.24
+  },
+  "age_distribution": [
+    {
+      "age": "[40-50)",
+      "readmission_rate": 44.51
+    },
+    {
+      "age": "[50-60)",
+      "readmission_rate": 44.16
+    },
+    {
+      "age": "[60-70)",
+      "readmission_rate": 46.85
+    },
+    {
+      "age": "[70-80)",
+      "readmission_rate": 48.79
+    },
+    {
+      "age": "[80-90)",
+      "readmission_rate": 49.58
+    },
+    {
+      "age": "[90-100)",
+      "readmission_rate": 42.13
+    }
+  ],
+  "categorical_breakdowns": {
+    "medical_specialty": [
+      {
+        "category": "Missing",
+        "count": 12382,
+        "readmission_rate": 48.91
+      },
+      {
+        "category": "InternalMedicine",
+        "count": 3565,
+        "readmission_rate": 44.77
+      },
+      {
+        "category": "Other",
+        "count": 2664,
+        "readmission_rate": 41.48
+      },
+      {
+        "category": "Emergency/Trauma",
+        "count": 1885,
+        "readmission_rate": 49.39
+      },
+      {
+        "category": "Family/GeneralPractice",
+        "count": 1882,
+        "readmission_rate": 49.52
+      },
+      {
+        "category": "Cardiology",
+        "count": 1409,
+        "readmission_rate": 45.0
+      },
+      {
+        "category": "Surgery",
+        "count": 1213,
+        "readmission_rate": 41.22
+      }
+    ],
+    "diag_1": [
+      {
+        "category": "Circulatory",
+        "count": 7824,
+        "readmission_rate": 47.93
+      },
+      {
+        "category": "Other",
+        "count": 6498,
+        "readmission_rate": 45.12
+      },
+      {
+        "category": "Respiratory",
+        "count": 3680,
+        "readmission_rate": 49.08
+      },
+      {
+        "category": "Digestive",
+        "count": 2329,
+        "readmission_rate": 47.45
+      },
+      {
+        "category": "Diabetes",
+        "count": 1747,
+        "readmission_rate": 53.63
+      },
+      {
+        "category": "Injury",
+        "count": 1666,
+        "readmission_rate": 43.64
+      },
+      {
+        "category": "Musculoskeletal",
+        "count": 1252,
+        "readmission_rate": 39.54
+      },
+      {
+        "category": "Missing",
+        "count": 4,
+        "readmission_rate": 50.0
+      }
+    ],
+    "glucose_test": [
+      {
+        "category": "no",
+        "count": 23625,
+        "readmission_rate": 46.83
+      },
+      {
+        "category": "normal",
+        "count": 689,
+        "readmission_rate": 48.33
+      },
+      {
+        "category": "high",
+        "count": 686,
+        "readmission_rate": 52.04
+      }
+    ],
+    "A1Ctest": [
+      {
+        "category": "no",
+        "count": 20938,
+        "readmission_rate": 47.45
+      },
+      {
+        "category": "high",
+        "count": 2827,
+        "readmission_rate": 45.95
+      },
+      {
+        "category": "normal",
+        "count": 1235,
+        "readmission_rate": 42.11
+      }
+    ],
+    "change": [
+      {
+        "category": "no",
+        "count": 13497,
+        "readmission_rate": 45.02
+      },
+      {
+        "category": "yes",
+        "count": 11503,
+        "readmission_rate": 49.35
+      }
+    ],
+    "diabetes_med": [
+      {
+        "category": "yes",
+        "count": 19228,
+        "readmission_rate": 48.72
+      },
+      {
+        "category": "no",
+        "count": 5772,
+        "readmission_rate": 41.35
+      }
+    ]
+  },
+  "numerical_distributions": {
+    "time_in_hospital": [
+      {
+        "bin_start": 1.0,
+        "bin_end": 2.1,
+        "count": 7466
+      },
+      {
+        "bin_start": 2.1,
+        "bin_end": 3.2,
+        "count": 4311
+      },
+      {
+        "bin_start": 3.2,
+        "bin_end": 4.2,
+        "count": 3467
+      },
+      {
+        "bin_start": 4.2,
+        "bin_end": 5.3,
+        "count": 2542
+      },
+      {
+        "bin_start": 5.3,
+        "bin_end": 6.4,
+        "count": 1895
+      },
+      {
+        "bin_start": 6.4,
+        "bin_end": 7.5,
+        "count": 1467
+      },
+      {
+        "bin_start": 7.5,
+        "bin_end": 8.6,
+        "count": 1104
+      },
+      {
+        "bin_start": 8.6,
+        "bin_end": 9.7,
+        "count": 768
+      },
+      {
+        "bin_start": 9.7,
+        "bin_end": 10.8,
+        "count": 588
+      },
+      {
+        "bin_start": 10.8,
+        "bin_end": 11.8,
+        "count": 458
+      },
+      {
+        "bin_start": 11.8,
+        "bin_end": 12.9,
+        "count": 354
+      },
+      {
+        "bin_start": 12.9,
+        "bin_end": 14.0,
+        "count": 580
+      }
+    ],
+    "n_lab_procedures": [
+      {
+        "bin_start": 1.0,
+        "bin_end": 10.3,
+        "count": 2081
+      },
+      {
+        "bin_start": 10.3,
+        "bin_end": 19.7,
+        "count": 1357
+      },
+      {
+        "bin_start": 19.7,
+        "bin_end": 29.0,
+        "count": 1886
+      },
+      {
+        "bin_start": 29.0,
+        "bin_end": 38.3,
+        "count": 3958
+      },
+      {
+        "bin_start": 38.3,
+        "bin_end": 47.7,
+        "count": 4911
+      },
+      {
+        "bin_start": 47.7,
+        "bin_end": 57.0,
+        "count": 4267
+      },
+      {
+        "bin_start": 57.0,
+        "bin_end": 66.3,
+        "count": 3652
+      },
+      {
+        "bin_start": 66.3,
+        "bin_end": 75.7,
+        "count": 1911
+      },
+      {
+        "bin_start": 75.7,
+        "bin_end": 85.0,
+        "count": 721
+      },
+      {
+        "bin_start": 85.0,
+        "bin_end": 94.3,
+        "count": 208
+      },
+      {
+        "bin_start": 94.3,
+        "bin_end": 103.7,
+        "count": 39
+      },
+      {
+        "bin_start": 103.7,
+        "bin_end": 113.0,
+        "count": 9
+      }
+    ],
+    "n_procedures": [
+      {
+        "bin_start": 0.0,
+        "bin_end": 0.5,
+        "count": 11409
+      },
+      {
+        "bin_start": 0.5,
+        "bin_end": 1.0,
+        "count": 0
+      },
+      {
+        "bin_start": 1.0,
+        "bin_end": 1.5,
+        "count": 5098
+      },
+      {
+        "bin_start": 1.5,
+        "bin_end": 2.0,
+        "count": 0
+      },
+      {
+        "bin_start": 2.0,
+        "bin_end": 2.5,
+        "count": 3064
+      },
+      {
+        "bin_start": 2.5,
+        "bin_end": 3.0,
+        "count": 0
+      },
+      {
+        "bin_start": 3.0,
+        "bin_end": 3.5,
+        "count": 2395
+      },
+      {
+        "bin_start": 3.5,
+        "bin_end": 4.0,
+        "count": 0
+      },
+      {
+        "bin_start": 4.0,
+        "bin_end": 4.5,
+        "count": 999
+      },
+      {
+        "bin_start": 4.5,
+        "bin_end": 5.0,
+        "count": 0
+      },
+      {
+        "bin_start": 5.0,
+        "bin_end": 5.5,
+        "count": 808
+      },
+      {
+        "bin_start": 5.5,
+        "bin_end": 6.0,
+        "count": 1227
+      }
+    ],
+    "n_medications": [
+      {
+        "bin_start": 1.0,
+        "bin_end": 7.5,
+        "count": 2500
+      },
+      {
+        "bin_start": 7.5,
+        "bin_end": 14.0,
+        "count": 7841
+      },
+      {
+        "bin_start": 14.0,
+        "bin_end": 20.5,
+        "count": 8609
+      },
+      {
+        "bin_start": 20.5,
+        "bin_end": 27.0,
+        "count": 3584
+      },
+      {
+        "bin_start": 27.0,
+        "bin_end": 33.5,
+        "count": 1622
+      },
+      {
+        "bin_start": 33.5,
+        "bin_end": 40.0,
+        "count": 472
+      },
+      {
+        "bin_start": 40.0,
+        "bin_end": 46.5,
+        "count": 202
+      },
+      {
+        "bin_start": 46.5,
+        "bin_end": 53.0,
+        "count": 88
+      },
+      {
+        "bin_start": 53.0,
+        "bin_end": 59.5,
+        "count": 54
+      },
+      {
+        "bin_start": 59.5,
+        "bin_end": 66.0,
+        "count": 21
+      },
+      {
+        "bin_start": 66.0,
+        "bin_end": 72.5,
+        "count": 5
+      },
+      {
+        "bin_start": 72.5,
+        "bin_end": 79.0,
+        "count": 2
+      }
+    ],
+    "n_outpatient": [
+      {
+        "bin_start": 0.0,
+        "bin_end": 2.8,
+        "count": 23848
+      },
+      {
+        "bin_start": 2.8,
+        "bin_end": 5.5,
+        "count": 942
+      },
+      {
+        "bin_start": 5.5,
+        "bin_end": 8.2,
+        "count": 131
+      },
+      {
+        "bin_start": 8.2,
+        "bin_end": 11.0,
+        "count": 25
+      },
+      {
+        "bin_start": 11.0,
+        "bin_end": 13.8,
+        "count": 29
+      },
+      {
+        "bin_start": 13.8,
+        "bin_end": 16.5,
+        "count": 14
+      },
+      {
+        "bin_start": 16.5,
+        "bin_end": 19.2,
+        "count": 2
+      },
+      {
+        "bin_start": 19.2,
+        "bin_end": 22.0,
+        "count": 5
+      },
+      {
+        "bin_start": 22.0,
+        "bin_end": 24.8,
+        "count": 1
+      },
+      {
+        "bin_start": 24.8,
+        "bin_end": 27.5,
+        "count": 2
+      },
+      {
+        "bin_start": 27.5,
+        "bin_end": 30.2,
+        "count": 0
+      },
+      {
+        "bin_start": 30.2,
+        "bin_end": 33.0,
+        "count": 1
+      }
+    ],
+    "n_inpatient": [
+      {
+        "bin_start": 0.0,
+        "bin_end": 1.2,
+        "count": 21463
+      },
+      {
+        "bin_start": 1.2,
+        "bin_end": 2.5,
+        "count": 1909
+      },
+      {
+        "bin_start": 2.5,
+        "bin_end": 3.8,
+        "count": 833
+      },
+      {
+        "bin_start": 3.8,
+        "bin_end": 5.0,
+        "count": 358
+      },
+      {
+        "bin_start": 5.0,
+        "bin_end": 6.2,
+        "count": 315
+      },
+      {
+        "bin_start": 6.2,
+        "bin_end": 7.5,
+        "count": 47
+      },
+      {
+        "bin_start": 7.5,
+        "bin_end": 8.8,
+        "count": 26
+      },
+      {
+        "bin_start": 8.8,
+        "bin_end": 10.0,
+        "count": 20
+      },
+      {
+        "bin_start": 10.0,
+        "bin_end": 11.2,
+        "count": 20
+      },
+      {
+        "bin_start": 11.2,
+        "bin_end": 12.5,
+        "count": 3
+      },
+      {
+        "bin_start": 12.5,
+        "bin_end": 13.8,
+        "count": 2
+      },
+      {
+        "bin_start": 13.8,
+        "bin_end": 15.0,
+        "count": 4
+      }
+    ],
+    "n_emergency": [
+      {
+        "bin_start": 0.0,
+        "bin_end": 5.3,
+        "count": 24929
+      },
+      {
+        "bin_start": 5.3,
+        "bin_end": 10.7,
+        "count": 54
+      },
+      {
+        "bin_start": 10.7,
+        "bin_end": 16.0,
+        "count": 6
+      },
+      {
+        "bin_start": 16.0,
+        "bin_end": 21.3,
+        "count": 8
+      },
+      {
+        "bin_start": 21.3,
+        "bin_end": 26.7,
+        "count": 0
+      },
+      {
+        "bin_start": 26.7,
+        "bin_end": 32.0,
+        "count": 1
+      },
+      {
+        "bin_start": 32.0,
+        "bin_end": 37.3,
+        "count": 1
+      },
+      {
+        "bin_start": 37.3,
+        "bin_end": 42.7,
+        "count": 0
+      },
+      {
+        "bin_start": 42.7,
+        "bin_end": 48.0,
+        "count": 0
+      },
+      {
+        "bin_start": 48.0,
+        "bin_end": 53.3,
+        "count": 0
+      },
+      {
+        "bin_start": 53.3,
+        "bin_end": 58.7,
+        "count": 0
+      },
+      {
+        "bin_start": 58.7,
+        "bin_end": 64.0,
+        "count": 1
+      }
+    ]
+  },
+  "correlations": {
+    "columns": [
+      "time_in_hospital",
+      "n_lab_procedures",
+      "n_procedures",
+      "n_medications",
+      "n_outpatient",
+      "n_inpatient",
+      "n_emergency"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.328,
+        0.179,
+        0.449,
+        -0.011,
+        0.077,
+        -0.013
+      ],
+      [
+        0.328,
+        1.0,
+        0.049,
+        0.272,
+        -0.004,
+        0.044,
+        -0.005
+      ],
+      [
+        0.179,
+        0.049,
+        1.0,
+        0.369,
+        -0.035,
+        -0.069,
+        -0.043
+      ],
+      [
+        0.449,
+        0.272,
+        0.369,
+        1.0,
+        0.043,
+        0.066,
+        0.013
+      ],
+      [
+        -0.011,
+        -0.004,
+        -0.035,
+        0.043,
+        1.0,
+        0.128,
+        0.097
+      ],
+      [
+        0.077,
+        0.044,
+        -0.069,
+        0.066,
+        0.128,
+        1.0,
+        0.22
+      ],
+      [
+        -0.013,
+        -0.005,
+        -0.043,
+        0.013,
+        0.097,
+        0.22,
+        1.0
+      ]
+    ]
+  },
+  "feature_importance": [
+    {
+      "feature": "n_inpatient",
+      "importance": 0.4792
+    },
+    {
+      "feature": "n_outpatient",
+      "importance": 0.0768
+    },
+    {
+      "feature": "n_medications",
+      "importance": 0.0767
+    },
+    {
+      "feature": "n_emergency",
+      "importance": 0.0576
+    },
+    {
+      "feature": "n_lab_procedures",
+      "importance": 0.0568
+    },
+    {
+      "feature": "n_procedures",
+      "importance": 0.0301
+    },
+    {
+      "feature": "time_in_hospital",
+      "importance": 0.0231
+    },
+    {
+      "feature": "diabetes_med_yes",
+      "importance": 0.0152
+    },
+    {
+      "feature": "glucose_test_no",
+      "importance": 0.014
+    },
+    {
+      "feature": "medical_specialty_Emergency/Trauma",
+      "importance": 0.0129
+    },
+    {
+      "feature": "age_[80-90)",
+      "importance": 0.0123
+    },
+    {
+      "feature": "diabetes_med_no",
+      "importance": 0.0118
+    }
+  ],
+  "numeric_means": {
+    "time_in_hospital": 4.45,
+    "n_lab_procedures": 43.24,
+    "n_procedures": 1.35,
+    "n_medications": 16.25,
+    "n_outpatient": 0.37,
+    "n_inpatient": 0.62,
+    "n_emergency": 0.19
+  },
+  "options": {
+    "age": [
+      "[40-50)",
+      "[50-60)",
+      "[60-70)",
+      "[70-80)",
+      "[80-90)",
+      "[90-100)"
+    ],
+    "medical_specialty": [
+      "Cardiology",
+      "Emergency/Trauma",
+      "Family/GeneralPractice",
+      "InternalMedicine",
+      "Missing",
+      "Other",
+      "Surgery"
+    ],
+    "diag_1": [
+      "Circulatory",
+      "Diabetes",
+      "Digestive",
+      "Injury",
+      "Missing",
+      "Musculoskeletal",
+      "Other",
+      "Respiratory"
+    ],
+    "diag_2": [
+      "Circulatory",
+      "Diabetes",
+      "Digestive",
+      "Injury",
+      "Missing",
+      "Musculoskeletal",
+      "Other",
+      "Respiratory"
+    ],
+    "diag_3": [
+      "Circulatory",
+      "Diabetes",
+      "Digestive",
+      "Injury",
+      "Missing",
+      "Musculoskeletal",
+      "Other",
+      "Respiratory"
+    ],
+    "glucose_test": [
+      "high",
+      "no",
+      "normal"
+    ],
+    "A1Ctest": [
+      "high",
+      "no",
+      "normal"
+    ],
+    "change": [
+      "no",
+      "yes"
+    ],
+    "diabetes_med": [
+      "no",
+      "yes"
+    ]
+  },
+  "model_comparison": [
+    {
+      "model": "Gradient Boosting",
+      "accuracy": 0.6182,
+      "precision": 0.625,
+      "recall": 0.47,
+      "f1": 0.5365,
+      "roc_auc": 0.6557
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.6118,
+      "precision": 0.6133,
+      "recall": 0.4721,
+      "f1": 0.5335,
+      "roc_auc": 0.6555
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.6088,
+      "precision": 0.6278,
+      "recall": 0.4126,
+      "f1": 0.4979,
+      "roc_auc": 0.645
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.604,
+      "precision": 0.5987,
+      "recall": 0.4785,
+      "f1": 0.5319,
+      "roc_auc": 0.6228
+    }
+  ],
+  "roc_curves": {
+    "Logistic Regression": {
+      "fpr": [
+        0.0,
+        0.02,
+        0.0389,
+        0.0638,
+        0.0876,
+        0.1121,
+        0.1393,
+        0.1687,
+        0.1944,
+        0.2257,
+        0.2507,
+        0.282,
+        0.3088,
+        0.3386,
+        0.3707,
+        0.4085,
+        0.4405,
+        0.4726,
+        0.5172,
+        0.5557,
+        0.5953,
+        0.6331,
+        0.6742,
+        0.7071,
+        0.7592,
+        0.798,
+        0.8418,
+        0.8883,
+        0.9305,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.0719,
+        0.1195,
+        0.1769,
+        0.2216,
+        0.2684,
+        0.3075,
+        0.3509,
+        0.3905,
+        0.4245,
+        0.4581,
+        0.4866,
+        0.5198,
+        0.5525,
+        0.5823,
+        0.6117,
+        0.6508,
+        0.6814,
+        0.7103,
+        0.7354,
+        0.7639,
+        0.7886,
+        0.8141,
+        0.8439,
+        0.8711,
+        0.8988,
+        0.926,
+        0.9519,
+        0.9762,
+        1.0
+      ]
+    },
+    "Decision Tree": {
+      "fpr": [
+        0.0,
+        0.0072,
+        0.0125,
+        0.0196,
+        0.0211,
+        0.026,
+        0.0332,
+        0.04,
+        0.0468,
+        0.054,
+        0.0736,
+        0.0853,
+        0.0883,
+        0.1869,
+        0.2167,
+        0.2446,
+        0.2846,
+        0.3673,
+        0.379,
+        0.4153,
+        0.5459,
+        0.5908,
+        0.6085,
+        0.7297,
+        0.8403,
+        0.9117,
+        0.977,
+        0.98,
+        0.9883,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.0204,
+        0.0247,
+        0.0493,
+        0.051,
+        0.0621,
+        0.08,
+        0.0966,
+        0.1187,
+        0.1302,
+        0.1672,
+        0.1761,
+        0.1812,
+        0.3556,
+        0.3862,
+        0.436,
+        0.4785,
+        0.5555,
+        0.5695,
+        0.6053,
+        0.7027,
+        0.7452,
+        0.7618,
+        0.8413,
+        0.9009,
+        0.9353,
+        0.9698,
+        0.9732,
+        0.98,
+        1.0
+      ]
+    },
+    "Random Forest": {
+      "fpr": [
+        0.0,
+        0.0189,
+        0.0427,
+        0.0649,
+        0.0887,
+        0.114,
+        0.1393,
+        0.1691,
+        0.1978,
+        0.2273,
+        0.2541,
+        0.279,
+        0.3073,
+        0.3371,
+        0.3635,
+        0.3979,
+        0.4266,
+        0.4621,
+        0.5047,
+        0.5428,
+        0.5832,
+        0.6236,
+        0.6636,
+        0.7112,
+        0.755,
+        0.8075,
+        0.8448,
+        0.883,
+        0.9385,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.06,
+        0.1165,
+        0.1761,
+        0.2246,
+        0.2748,
+        0.3186,
+        0.3628,
+        0.3956,
+        0.4279,
+        0.4607,
+        0.4985,
+        0.5351,
+        0.5627,
+        0.5929,
+        0.6248,
+        0.6572,
+        0.6925,
+        0.7252,
+        0.7546,
+        0.7771,
+        0.8052,
+        0.8345,
+        0.8575,
+        0.8818,
+        0.906,
+        0.9302,
+        0.9532,
+        0.9792,
+        1.0
+      ]
+    },
+    "Gradient Boosting": {
+      "fpr": [
+        0.0,
+        0.0185,
+        0.0396,
+        0.0653,
+        0.0883,
+        0.1117,
+        0.1378,
+        0.1619,
+        0.1921,
+        0.2193,
+        0.2488,
+        0.2786,
+        0.3152,
+        0.3401,
+        0.3673,
+        0.4039,
+        0.433,
+        0.4628,
+        0.4953,
+        0.5353,
+        0.5678,
+        0.61,
+        0.6557,
+        0.6961,
+        0.7365,
+        0.7803,
+        0.8263,
+        0.8777,
+        0.9358,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.0791,
+        0.1204,
+        0.1914,
+        0.2437,
+        0.2854,
+        0.3199,
+        0.3522,
+        0.3879,
+        0.4236,
+        0.4696,
+        0.5091,
+        0.5423,
+        0.57,
+        0.5955,
+        0.6231,
+        0.6521,
+        0.6818,
+        0.7108,
+        0.7354,
+        0.7618,
+        0.7912,
+        0.8188,
+        0.8452,
+        0.8728,
+        0.8945,
+        0.9188,
+        0.9481,
+        0.9753,
+        1.0
+      ]
+    }
+  },
+  "best_model": "Gradient Boosting"
+}

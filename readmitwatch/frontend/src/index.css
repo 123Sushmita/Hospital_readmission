@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html, body {
+  background-color: #F6F7F5;
+  color: #16242E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* signature: thin "trace" rule beneath the top bar, like a settled ECG line */
+.trace-rule {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #5B7A8C 8%,
+    #5B7A8C 14%,
+    transparent 16%,
+    transparent 30%,
+    #5B7A8C 33%,
+    #B0473F 36%,
+    #5B7A8C 39%,
+    transparent 41%,
+    transparent 100%
+  );
+  background-size: 100% 100%;
+  opacity: 0.55;
+}
+
+.acuity-card {
+  border-left: 4px solid var(--acuity-color, #5B7A8C);
+}
+
+:focus-visible {
+  outline: 2px solid #16242E;
+  outline-offset: 2px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}
